@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: 'Linear Grotesk';
+	src: local('Linear Grotesk'),
+		url(../assets/fonts/LinearGrotesk-Light.otf) format('truetype');
+	font-weight: 300;
+	font-display: fallback;
+}
+@font-face {
+	font-family: 'Linear Grotesk';
+	src: local('Linear Grotesk'),
+		url(../assets/fonts/LinearGrotesk-Regular.otf) format('truetype');
+	font-weight: 400;
+	font-display: fallback;
+}
+@font-face {
+	font-family: 'Linear Grotesk';
+	src: local('Linear Grotesk'),
+		url(../assets/fonts/LinearGrotesk-Medium.otf) format('truetype');
+	font-weight: 500;
+
+	font-display: fallback;
+}
+@font-face {
+	font-family: 'Linear Grotesk';
+	src: local('Linear Grotesk'),
+		url(../assets/fonts/LinearGrotesk-SemiBold.otf) format('truetype');
+	font-weight: 600;
+
+	font-display: fallback;
+}
+@font-face {
+	font-family: 'Linear Grotesk';
+	src: local('Linear Grotesk'),
+		url(../assets/fonts/LinearGrotesk-Bold.otf) format('truetype');
+	font-weight: 700;
+
+	font-display: fallback;
+}
+
+:root {
+	--foreground-rgb: 0, 0, 0;
+	--background-start-rgb: 214, 219, 220;
+	--background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--foreground-rgb: 255, 255, 255;
+		--background-start-rgb: 0, 0, 0;
+		--background-end-rgb: 0, 0, 0;
+	}
+}
+.gradient-text {
+	background-image: linear-gradient(to right, #2984ef, #7331ff);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	background-size: 200% auto;
+	font-size: 20px; /* Adjust font size as needed */
+	font-weight: bold; /* Adjust font weight as needed */
+}
+body {
+	color: rgb(var(--foreground-rgb));
+	font-family: 'Linear Grotesk';
+	background: linear-gradient(
+			to bottom,
+			transparent,
+			rgb(var(--background-end-rgb))
+		)
+		rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+	.text-balance {
+		text-wrap: balance;
+	}
+}
