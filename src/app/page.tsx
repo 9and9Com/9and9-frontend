@@ -10,6 +10,7 @@ import {
 	triangle,
 } from '../../public/images';
 import Button from '@/components/button';
+import ParallaxScroll from '@/components/parllax-scroll';
 export default function Home() {
 	return (
 		<main className='max-w-[1200px] flex flex-col items-center'>
@@ -149,8 +150,8 @@ export default function Home() {
 					</div>
 				</div>
 			</div>
-			<div className='w-full flex my-16 max-h-screen'>
-				<div className='w-1/2 flex flex-col p-6 '>
+			<div className='w-full flex my-16 '>
+				<div className='w-1/2 flex flex-col p-6 sticky max-h-screen top-28 scroll-smooth'>
 					<h3 className='text-5xl my-4'>What We Offer</h3>
 					<p className='text-2xl'>
 						Our high-performaing services help businesses embrace innovation and
@@ -181,6 +182,15 @@ export default function Home() {
 					</div>
 					<div className='bg-gray  p-16 rounded-xl mb-10'>
 						<h2>Testing Phase</h2>
+						<p>
+							Work closely with our business consultants, who are on top of the
+							latest tech and industry trends. We can help you develop a
+							technology strategy and propel your business towards digital
+							transformation no matter what your goal is.
+						</p>
+					</div>
+					<div className='bg-gray  p-16 rounded-xl mb-10'>
+						<h2>Consulting</h2>
 						<p>
 							Work closely with our business consultants, who are on top of the
 							latest tech and industry trends. We can help you develop a

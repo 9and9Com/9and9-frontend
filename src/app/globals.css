@@ -63,6 +63,31 @@
 	font-size: 20px; /* Adjust font size as needed */
 	font-weight: bold; /* Adjust font weight as needed */
 }
+
+.container {
+	display: flex;
+	height: 100vh; /* Adjust as needed */
+}
+
+.left-panel,
+.right-panel {
+	flex: 1;
+	overflow: hidden;
+}
+
+.left-panel {
+	background-color: #f0f0f0; /* Just for visual clarity */
+	overflow: auto;
+}
+
+.right-panel {
+	overflow-y: scroll;
+}
+
+.content {
+	padding: 20px;
+}
+
 body {
 	color: rgb(var(--foreground-rgb));
 	font-family: 'Linear Grotesk';
