@@ -10,7 +10,8 @@ import {
 	triangle,
 } from '../../public/images';
 import Button from '@/components/button';
-import ParallaxScroll from '@/components/parllax-scroll';
+import { Parallax } from 'react-scroll-parallax';
+import UseParallax from './useParallax';
 export default function Home() {
 	return (
 		<main className='max-w-[1200px] flex flex-col items-center'>
@@ -34,10 +35,12 @@ export default function Home() {
 					</div>
 				</div>
 			</div>
-			<div className='mt-20 relative'>
-				<div className=' h-[200px] rounded-[40%] top-[-10px] absolute -inset-2  bg-white opacity-25 blur-3xl'></div>
-				<Image src={company} className='mt-14 px-5' alt='' />
-			</div>
+			<UseParallax>
+				<div className='mt-20 relative'>
+					<div className=' h-[200px] rounded-[40%] top-[-10px] absolute -inset-2  bg-white opacity-25 blur-3xl'></div>
+					<Image src={company} className='mt-14 px-4' alt='' />
+				</div>
+			</UseParallax>
 			<div className='w-full mt-10 p-5'>
 				<div className='mb-2 w-fit font-normal text-transparent text-2xl bg-clip-text bg-gradient-to-r from-blue via-purple to-pink'>
 					Who Are We{' '}
