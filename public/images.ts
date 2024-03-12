@@ -8,7 +8,11 @@ import people from './images/people-banner.webp';
 import chevron from './logo/Vector.svg';
 import NineandNine from './logo/logo.svg';
 import socials from './logo/Group 12.png';
+import moon from './logo/moon.png';
+import sun from './logo/sun.png';
 export {
+	moon,
+	sun,
 	socials,
 	company,
 	asset,
