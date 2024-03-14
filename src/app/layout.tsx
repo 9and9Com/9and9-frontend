@@ -20,12 +20,12 @@ export default function RootLayout({
 				<ThemeProvider attribute='class'>
 					<div
 						className={
-							'font-grotesk flex min-h-screen flex-col  items-center  pt-0  bg-white dark:bg-black'
+							' font-grotesk flex min-h-screen flex-col  items-center  pt-0  bg-white dark:bg-black'
 						}
 					>
 						<Providers>
 							<Header />
-							<div className='mt-5 relative'>{children}</div>
+							<div className='mt-5 '>{children}</div>
 							<Footer />
 							<div className='z-10 fixed w-[50px] right-0 m-10'>
 								<Toggle />

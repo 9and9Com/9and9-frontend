@@ -23,7 +23,7 @@ const Toggle = () => {
 			<div
 				className={`transition-all transform duration-300  ${
 					theme === 'dark' ? 'ml-[29px]' : 'ml-0'
-				}    z-10 shadow-lg border-[#dcdcdc] border-[1px] absolute bg-white w-[25px] h-[25px] rounded-xl top-[3px]`}
+				} z-10 shadow-lg border-[#dcdcdc] border-[1px] absolute bg-white w-[25px] h-[25px] rounded-xl top-[3px]`}
 			></div>
 			<Image src={sun} alt='' className='z-9' height={24} />
 		</button>

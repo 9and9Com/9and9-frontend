@@ -1,30 +1,75 @@
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from '../../public/logo/logo.svg';
 const Header = () => {
+	const [visible, setVisible] = useState(false);
+	const menu = [
+		{ title: 'Who We Are?' },
+		{ title: 'What We Do?' },
+		{ title: 'Why US!' },
+		{ title: 'Contact Us' },
+	];
+	useEffect(() => {
+		console.log(visible);
+	}, [visible]);
 	return (
-		<div className='w-full top-5 max-w-[900px]  sticky z-10 '>
-			<div className=' h-[120px] top-1 w-[70%] m-auto absolute -inset-2 rounded-lg bg-gradient-to-b from-blue  to-violet-900 opacity-35 blur-3xl'></div>
-			<div className=' h-[70px]  w-full  bg-header border-border border-[0.2px] top-5 px-5 py-3 flex justify-between rounded-md items-center opacity-85 '>
-				<div className='absolute inset-0 bg-gradient-to-b from-blue-500 to-purple-800 shadow-large'></div>
-				<Image src={logo} alt={''}></Image>
-				<div className='flex '>
-					<div className='text-sm mx-3 opacity-75 hover:opacity-100'>
-						Who We Are?
+		<div className='w-full top-5 max-w-[900px]  sticky z-10 px-4 md:px-8'>
+			<div className=' h-[120px] top-1 w-[70%] m-auto absolute -inset-2 rounded-lg bg-gradient-to-b from-blue  to-violet-900 opacity-35 blur-3xl z-[-1]'></div>
+			<div className='relative h-[70px]  w-full  bg-header border-border border-[0.2px] top-5 px-5 py-3 flex justify-between rounded-md items-center opacity-85 '>
+				<div className='flex'>
+					<div
+						className='flex flex-col mr-4 md:hidden cursor-pointer'
+						onClick={() => {
+							setVisible((prev) => !prev);
+						}}
+					>
+						<div className='w-6 bg-white h-[2px] mb-[6px]'></div>
+						<div className='w-6 bg-white h-[2px] mb-[6px]'></div>
+						<div className='w-6 bg-white h-[2px] '></div>
 					</div>
-					<div className='text-sm mx-3 opacity-75 hover:opacity-100'>
-						What We Do?
-					</div>
-					<div className='text-sm mx-3 opacity-75 hover:opacity-100'>
-						Why US!
-					</div>
-					<div className='text-sm mx-3 opacity-75 hover:opacity-100'>
-						Contact
-					</div>
+					<Image
+						onClick={() => {
+							console.log('9and9');
+						}}
+						src={logo}
+						alt={''}
+						className='w-24'
+					></Image>
 				</div>
-				<button className='bg-white text-black px-5 py-3 rounded-md text-md font-semibold'>
+				<div className='hidden md:flex'>
+					{menu.map((item) => {
+						return (
+							<div
+								key={item.title}
+								className='text-sm mx-3 opacity-75 hover:opacity-100'
+								onClick={() => {
+									console.log(item.title);
+								}}
+							>
+								{item.title}
+							</div>
+						);
+					})}
+				</div>
+				<button className='bg-white text-black px-3 md:px-5 py-2 md:py-3 rounded-md text-xs md:text-md font-semibold'>
 					Get In Touch
 				</button>
+				<div
+					className={`absolute ${
+						visible ? 'flex' : 'hidden'
+					} bg-header flex-col w-full left-0 top-[70px]`}
+				>
+					{menu.map((item) => {
+						return (
+							<div
+								key={item.title}
+								className='py-3 text-sm mx-3 opacity-75 hover:opacity-100'
+							>
+								{item.title}
+							</div>
+						);
+					})}
+				</div>
 			</div>
 		</div>
 	);

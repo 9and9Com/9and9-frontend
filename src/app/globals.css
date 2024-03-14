@@ -109,7 +109,7 @@ body::-webkit-scrollbar-thumb {
 
 .switch {
 	font-size: 17px;
-	position: relative;
+	/* position: relative; */
 	display: inline-block;
 	width: 56px;
 	height: 28px;
