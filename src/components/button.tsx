@@ -3,7 +3,7 @@ import Image from 'next/image';
 import chevron from '../../public/logo/Vector.svg';
 const Button = ({ label }: { label: string }) => {
 	return (
-		<div className='flex my-4 dark:bg-white  bg-black md:my-8 max-w-max rounded-md  h-[50px] items-center mt-4 md:mt-8 '>
+		<div className='flex my-4 dark:bg-white  bg-black md:my-6 lg:my-8 max-w-max rounded-md  h-[50px] items-center mt-4 md:mt-8 '>
 			<button className='flex px-5  py-3  text-white dark:text-black font-bold  text-md'>
 				{label}
 			</button>

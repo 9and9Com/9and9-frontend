@@ -6,15 +6,21 @@ import Image from 'next/image';
 
 const Toggle = () => {
 	const { theme, setTheme } = useTheme();
-
+	useEffect(() => {
+		localStorage.getItem('theme') === 'dark'
+			? setTheme('dark')
+			: setTheme('light');
+	}, []);
 	return (
 		<button
-			className={`bg-black border-gray border-[1px]  dark:border-[#606060] rounded-2xl dark:bg-header flex w-[64px] justify-between p-1  relative`}
+			className={`hidden bg-black border-gray border-[1px]  dark:border-[#606060] rounded-2xl dark:bg-header md:flex w-[64px] justify-between p-1  relative`}
 			onClick={() => {
 				if (theme == 'dark') {
 					setTheme('light');
+					localStorage.setItem('theme', 'light');
 				} else {
 					setTheme('dark');
+					localStorage.setItem('theme', 'dark');
 				}
 			}}
 		>

@@ -15,7 +15,7 @@ const Header = () => {
 	return (
 		<div className='w-full top-5 max-w-[900px]  sticky z-10 px-4 md:px-8'>
 			<div className=' h-[120px] top-1 w-[70%] m-auto absolute -inset-2 rounded-lg bg-gradient-to-b from-blue  to-violet-900 opacity-35 blur-3xl z-[-1]'></div>
-			<div className='relative h-[70px]  w-full  bg-header border-border border-[0.2px] top-5 px-5 py-3 flex justify-between rounded-md items-center opacity-85 '>
+			<div className='relative h-[70px]  w-full  bg-header border-border border-[0.2px] top-5 px-5 py-3 flex justify-between rounded-md items-center '>
 				<div className='flex'>
 					<div
 						className='flex flex-col mr-4 md:hidden cursor-pointer'
@@ -55,15 +55,15 @@ const Header = () => {
 					Get In Touch
 				</button>
 				<div
-					className={`absolute ${
-						visible ? 'flex' : 'hidden'
-					} bg-header flex-col w-full left-0 top-[70px]`}
+					className={`transition-all transform duration-600 absolute rounded-b-lg ${
+						visible ? 'h-[180px] ' : 'h-0'
+					} bg-header overflow-hidden flex-col w-full left-0 top-[70px]`}
 				>
 					{menu.map((item) => {
 						return (
 							<div
 								key={item.title}
-								className='py-3 text-sm mx-3 opacity-75 hover:opacity-100'
+								className='py-3 text-sm px-3 opacity-75 hover:opacity-100 hover:bg-black'
 							>
 								{item.title}
 							</div>
