@@ -8,14 +8,15 @@ const Footer = () => {
 		<div className='flex flex-col w-full items-center  bg-footer dark:bg-black relative lg:mt-38 md:mt-20'>
 			<div className='flex justify-between flex-col lg:flex-row w-[90%] py-5  bg-gradient-to-r from-blue via-purple to-pink rounded-xl items-center absolute top-[-15%]'>
 				<div className=' text-2xl text-center mt-5 lg:text-[24px] xl:text-[28px] px-12 '>
-					+91-40-64540048, +91-99128 91000
+					+91-40-64540048, <br className='md:hidden' />
+					+91-99128 91000
 				</div>
 				<div className=' flex flex-col mt-6 md:mt-0 md:flex-row pl-8 px-12 items-center justify-center'>
 					<div className='text-xl md:pr-8 text-center '>Join Mailing List</div>
 					<Button label='Get Started' />
 				</div>
 			</div>
-			<div className=' py-12 mt-28 flex px-6 flex-col md:grid md:grid-cols-2 lg:flex lg:flex-row  border-b-[2px] border-border w-[90%]  gap-6 md:gap-10 text-black dark:text-white'>
+			<div className=' py-12 mt-36 md:mt-28 flex px-6 flex-col md:grid md:grid-cols-2 lg:flex lg:flex-row  border-b-[2px] border-border w-[90%]  gap-6 md:gap-10 text-black dark:text-white'>
 				<div className='  lg:w-1/5 '>
 					<Image
 						src={NineandNine}
@@ -25,21 +26,39 @@ const Footer = () => {
 				</div>
 				<div className='w-full lg:w-1/5'>
 					<h2 className='text-lg pb-0 md:pb-2 text-bold '>Use Cases</h2>
-					<ul className='text-textblack dark:text-textgray flex md:block gap-4'>
-						<li className='opacity-70 text-sm py-[6px]'>Web-designers</li>
-						<li className='opacity-70 text-sm py-[6px]'>Marketers</li>
-						<li className='opacity-70 text-sm py-[6px]'>Small Business</li>
-						<li className='opacity-70 text-sm py-[6px]'>Website Builder</li>
+					<ul className='text-textblack dark:text-textgray flex flex-wrap md:block gap-2 md:gap-4'>
+						<li className='opacity-70 text-sm py-0 md:py-[6px] whitespace-nowrap'>
+							Web-designers
+						</li>
+						<li className='opacity-70 text-sm py-0 md:py-[6px] whitespace-nowrap'>
+							Marketers
+						</li>
+						<li className='opacity-70 text-sm py-0 md:py-[6px] whitespace-nowrap'>
+							Small Business
+						</li>
+						<li className='opacity-70 text-sm py-0 md:py-[6px] whitespace-nowrap'>
+							Website Builder
+						</li>
 					</ul>
 				</div>
 				<div className='w-full lg:w-1/5 '>
 					<h2 className='text-lg pb-0 md:pb-2 text-bold'>Company</h2>
-					<ul className='text-textblack dark:text-textgray flex md:block gap-4'>
-						<li className='opacity-70 text-sm py-[6px]'>About Us</li>
-						<li className='opacity-70 text-sm py-[6px]'>Careers</li>
-						<li className='opacity-70 text-sm py-[6px]'>FAQs</li>
-						<li className='opacity-70 text-sm py-[6px]'>Teams</li>{' '}
-						<li className='opacity-70 text-sm py-[6px]'>Contact Us</li>
+					<ul className='text-textblack dark:text-textgray flex flex-wrap md:block gap-2 md:gap-4'>
+						<li className='opacity-70 text-sm py-0 md:py-[6px] whitespace-nowrap'>
+							About Us
+						</li>
+						<li className='opacity-70 text-sm py-0 md:py-[6px] whitespace-nowrap'>
+							Careers
+						</li>
+						<li className='opacity-70 text-sm py-0 md:py-[6px] whitespace-nowrap'>
+							FAQs
+						</li>
+						<li className='opacity-70 text-sm py-0 md:py-[6px] whitespace-nowrap'>
+							Teams
+						</li>{' '}
+						<li className='opacity-70 text-sm py-0 md:py-[6px] whitespace-nowrap'>
+							Contact Us
+						</li>
 					</ul>
 				</div>
 				<div className='w-full  lg:w-2/5'>
@@ -51,13 +70,13 @@ const Footer = () => {
 					/>
 
 					<h2 className='text-lg text-black dark:text-white'>Subscribe</h2>
-					<p className='opacity-70 text-lg py-[6px] text-black dark:text-white'>
+					<p className='opacity-70 text-lg py-[6px] text-black dark:text-white text-wrap'>
 						Join our mailing list and stay updated on Integrated Insights of
 						9and9
 					</p>
-					<div className='mt-5 rounded-md flex'>
+					<div className='mt-5 rounded-md flex w-full overflow-hidden'>
 						<input
-							className='rounded-l-lg border-none outline-none  text-sm h-9 px-4 '
+							className='rounded-l-lg border-none w-max outline-none  text-sm h-9 px-4 min-w-[125px]'
 							placeholder='Enter your email Address'
 						/>{' '}
 						<button className='text-white rounded-r-lg p-2 bg-gradient-to-r from-blue via-purple to-pink text-sm h-9'>
